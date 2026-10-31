@@ -4,109 +4,224 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TEDJ CINEMA</title>
+<title>TEDJ CINEMA | Gladiator</title>
+
 <style>
-* { box-sizing: border-box; }
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: #08090d;
+  padding: 0;
+}
+
+body {
+  background: #090909;
   color: white;
   font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
+
 header {
   padding: 25px 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #24242a;
+  border-bottom: 1px solid #302416;
 }
+
 .logo {
   font-size: 23px;
-  font-weight: 900;
+  font-weight: bold;
   letter-spacing: 3px;
 }
-.logo span { color: #d6ae65; }
-.tag { color: #999; font-size: 12px; }
+
+.logo span {
+  color: #d5a64c;
+}
+
+.header-text {
+  color: #b99a63;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
 .hero {
-  max-width: 1000px;
-  margin: 65px auto;
-  padding: 0 25px;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  animation: fadeIn 1.2s ease;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: #b47b22;
+  opacity: 0.09;
+  filter: blur(130px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.label {
+  color: #d5a64c;
+  letter-spacing: 5px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(55px, 10vw, 100px);
+  letter-spacing: 5px;
+  color: #e6c27d;
+  text-shadow: 0 0 35px #b47b2244;
+  animation: rise 1.2s ease;
+  position: relative;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background: #c99a42;
+  margin: 25px auto;
+}
+
+.message {
+  max-width: 650px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.watch {
+  display: inline-block;
+  padding: 17px 42px;
+  border: 1px solid #d5a64c;
+  border-radius: 40px;
+  color: #e6c27d;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.watch:hover {
+  background: #d5a64c;
+  color: #080808;
+  box-shadow: 0 0 25px #d5a64c66;
+  transform: translateY(-3px);
+}
+
+.player-section {
+  max-width: 950px;
+  margin: 0 auto 70px;
+  padding: 0 20px;
   text-align: center;
 }
-.label {
-  color: #d6ae65;
+
+.player-section h2 {
+  color: #d5a64c;
+  font-size: 16px;
   letter-spacing: 4px;
-  font-size: 11px;
+  margin-bottom: 22px;
 }
-h1 {
-  font-size: clamp(35px, 7vw, 65px);
-  margin: 18px 0;
-  letter-spacing: 2px;
-}
-.description {
-  color: #aaa;
-  line-height: 1.7;
-  max-width: 550px;
-  margin: 0 auto 30px;
-}
+
 .player {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: #15151b;
-  border: 1px solid #343039;
-  border-radius: 12px;
+  background: #151515;
+  border: 1px solid #72572d;
+  border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 0 35px #b47b2218;
 }
+
 video {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;
 }
-.note {
-  color: #777;
-  font-size: 12px;
-  margin-top: 18px;
-}
+
 footer {
   text-align: center;
-  color: #666;
-  padding: 30px;
+  padding: 25px;
+  color: #777;
+  border-top: 1px solid #292116;
   font-size: 12px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <div class="logo">TEDJ <span>CINEMA</span></div>
-  <div class="tag">PRIVATE MOVIE NIGHT</div>
+  <div class="header-text">WATCH · ENJOY · REPEAT</div>
 </header>
 
-<main class="hero">
-  <div class="label">NOW SHOWING</div>
+<section class="hero">
 
-  <h1>YOUR MOVIE TITLE</h1>
+  <div class="label">TONIGHT'S MOVIE</div>
 
-  <p class="description">
-    Sit back, relax and enjoy the movie.
-    Welcome to your private cinema experience.
+  <h1>GLADIATOR</h1>
+
+  <div class="line"></div>
+
+  <p class="message">
+    Hawada 3maltelkom web site juuust 9rawww
+    ou matatsababoch 3liya, youu seeee imene?
+    aya badi tatfaraj
   </p>
+
+  <a href="#movie" class="watch">▶ WATCH NOW</a>
+
+</section>
+
+<section class="player-section" id="movie">
+
+  <h2>THE MOVIE</h2>
 
   <div class="player">
     <video controls playsinline preload="metadata">
       <source src="movie.mp4" type="video/mp4">
-      Your browser does not support video playback.
+      Your browser does not support video.
     </video>
   </div>
 
-  <p class="note">
-    Enjoy the movie · TEDJ CINEMA
-  </p>
-</main>
+</section>
 
 <footer>
-  © 2026 TEDJ CINEMA · Made for movie lovers
+  © 2026 TEDJ CINEMA · Made with passion
 </footer>
 
 </body>
