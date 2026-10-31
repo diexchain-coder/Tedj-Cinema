@@ -1,1 +1,113 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEDJ CINEMA</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #08090d;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+header {
+  padding: 25px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #24242a;
+}
+.logo {
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+.logo span { color: #d6ae65; }
+.tag { color: #999; font-size: 12px; }
+.hero {
+  max-width: 1000px;
+  margin: 65px auto;
+  padding: 0 25px;
+  text-align: center;
+}
+.label {
+  color: #d6ae65;
+  letter-spacing: 4px;
+  font-size: 11px;
+}
+h1 {
+  font-size: clamp(35px, 7vw, 65px);
+  margin: 18px 0;
+  letter-spacing: 2px;
+}
+.description {
+  color: #aaa;
+  line-height: 1.7;
+  max-width: 550px;
+  margin: 0 auto 30px;
+}
+.player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #15151b;
+  border: 1px solid #343039;
+  border-radius: 12px;
+  overflow: hidden;
+}
+video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+.note {
+  color: #777;
+  font-size: 12px;
+  margin-top: 18px;
+}
+footer {
+  text-align: center;
+  color: #666;
+  padding: 30px;
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">TEDJ <span>CINEMA</span></div>
+  <div class="tag">PRIVATE MOVIE NIGHT</div>
+</header>
+
+<main class="hero">
+  <div class="label">NOW SHOWING</div>
+
+  <h1>YOUR MOVIE TITLE</h1>
+
+  <p class="description">
+    Sit back, relax and enjoy the movie.
+    Welcome to your private cinema experience.
+  </p>
+
+  <div class="player">
+    <video controls playsinline preload="metadata">
+      <source src="movie.mp4" type="video/mp4">
+      Your browser does not support video playback.
+    </video>
+  </div>
+
+  <p class="note">
+    Enjoy the movie · TEDJ CINEMA
+  </p>
+</main>
+
+<footer>
+  © 2026 TEDJ CINEMA · Made for movie lovers
+</footer>
+
+</body>
+</html>
